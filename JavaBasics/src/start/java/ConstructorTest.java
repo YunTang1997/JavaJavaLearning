@@ -47,7 +47,6 @@ class PersonNew{
 
     public PersonNew(String n){
         name = n;
-
     }
 
     public PersonNew(String n,int a){
