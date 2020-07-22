@@ -1,7 +1,5 @@
 package start.java;
 
-import com.sun.javafx.robot.FXRobotImage;
-
 /**
  * @author YunTang
  * @create 2020-07-07 15:07
@@ -11,10 +9,10 @@ public class StudentTest {
 
     public static void main(String[] args){ // 程序入口
 
-        Student[] stud = new Student[20]; // 创建Student类数组
+        Student3[] stud = new Student3[20]; // 创建Student类数组
         for (int i = 0; i < stud.length; i++){
             // 给数组元素赋值
-            stud[i] = new Student();
+            stud[i] = new Student3();
             // 给Student类的属性赋值
             stud[i].number = i + 1;
             // 1~6年级
@@ -41,7 +39,7 @@ public class StudentTest {
      * 遍历学生数组
      * @param stud 学生数组数组
      */
-    public void traver(Student[] stud){
+    public void traver(Student3[] stud){
 
         for (int i = 0; i < stud.length; i++) {
             System.out.println(stud[i].info());
@@ -53,7 +51,7 @@ public class StudentTest {
      * @param stud 学生数组
      * @param grade 选择的编辑
      */
-    public void printChoice(Student[] stud, int grade){
+    public void printChoice(Student3[] stud, int grade){
 
         for (int i = 0; i < stud.length; i++) {
             if (stud[i].state == grade){
@@ -66,9 +64,9 @@ public class StudentTest {
      * 使用冒泡排序将学生成绩排序（大到小）
      * @param stud 学生数组
      */
-    public void bubbleSort(Student[] stud){
+    public void bubbleSort(Student3[] stud){
 
-        Student tmp; // 创建Student类型的中间变量
+        Student3 tmp; // 创建Student类型的中间变量
         for (int i = 0; i < stud.length; i++) {
             for (int j = 0; j < stud.length - i - 1; j++) {
                 if (stud[j].score < stud[j + 1].score){

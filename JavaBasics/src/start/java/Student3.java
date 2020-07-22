@@ -16,7 +16,7 @@ package start.java;
 */
 
 
-public class Student {
+public class Student3 {
 
     int number;
     int state;
