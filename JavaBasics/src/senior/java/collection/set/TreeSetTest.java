@@ -64,6 +64,7 @@ public class TreeSetTest {
     public void test3(){
 
         //按照年龄从小到大排列
+        // Comparator接口的匿名实现类的非匿名对象
         Comparator comparator = new Comparator() {
             @Override
             public int compare(Object o1, Object o2) {
