@@ -42,7 +42,7 @@ public class USBTest {
 
         computer.transferDate(phone);
 
-        // 创建了接口的匿名实现类的匿名对象
+        // 4.创建了接口的匿名实现类的匿名对象
         computer.transferDate(new USB() {
             @Override
             public void start() {
