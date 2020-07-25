@@ -2,6 +2,7 @@ package senior.java.commonlyusedclass.string;
 
 import org.junit.jupiter.api.Test;
 
+import java.net.SocketTimeoutException;
 import java.sql.SQLOutput;
 
 /**

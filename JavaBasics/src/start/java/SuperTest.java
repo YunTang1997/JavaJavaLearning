@@ -28,4 +28,5 @@ package start.java;
  */
 
 public class SuperTest {
+
 }
