@@ -30,15 +30,15 @@ package senior.java.thread;
  *
  * 线程的优先级：
  * 1.
- * MAX_PRIORITY：10
- * MIN _PRIORITY：1
- * NORM_PRIORITY：5  -->默认优先级
+ *   MAX_PRIORITY：10
+ *   MIN _PRIORITY：1
+ *   NORM_PRIORITY：5  -->默认优先级
  *
  * 2.如何获取和设置当前线程的优先级：
  *   getPriority():获取线程的优先级
  *   setPriority(int p):设置线程的优先级
  *
- * 说明：高优先级的线程要抢占低优先级线程cpu的执行权。但是只是从概率上讲，高优先级的线程高概率的情况下
+ * 说明：高优先级的线程要抢占低优先级线程cpu的执行权。但是只是从[概率上]讲，高优先级的线程高概率的情况下
  * 被执行。并不意味着只有当高优先级的线程执行完以后，低优先级的线程才执行。
  */
 
@@ -49,18 +49,27 @@ public class ThreadMethodsTest {
         HelloThread helloThread = new HelloThread();
 
         helloThread.setName("线程一");
+        helloThread.setPriority(Thread.MAX_PRIORITY); // 设置分线程优先级
         helloThread.start();
 
         // 给主线程命名
         Thread.currentThread().setName("主线程");
+        Thread.currentThread().setPriority(Thread.MIN_PRIORITY); // 设置主线程优先级
 
         for (int i = 0; i < 100; i++) {
             if (i % 2 == 0){
-                System.out.println(Thread.currentThread().getName() + ":" + i);
+                System.out.println(Thread.currentThread().getName() + ":" + Thread.currentThread().getPriority() + ":" + i);
             }
+
+//            if(i == 20){
+//                try {
+//                    helloThread.join();
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
         }
-
-
+        System.out.println(helloThread.isAlive());
     }
 }
 
@@ -69,12 +78,19 @@ class HelloThread extends Thread{
     public void run() {
         for (int i = 0; i < 100; i++) {
             if (i % 2 == 0){
-                System.out.println(Thread.currentThread().getName() + ":" + i);
+
+//                try {
+//                    this.sleep(100); // 注意此处处理异常不能使用throws，因为run()是继承父类Thread的，而父类中run方法并没有抛出异常
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+
+                System.out.println(Thread.currentThread().getName() + ":" + Thread.currentThread().getPriority() + ":" + i);
             }
 
-            if (i % 20 == 0){
-                yield();
-            }
+//            if (i % 20 == 0){
+//                yield();
+//            }
         }
     }
 
