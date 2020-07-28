@@ -16,7 +16,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  * ②maximumPoolSize：最大线程数
  * ③keepAliveTime：线程没有任务时最多保持多长时间后会终止
  *
- * JDK 5.0起提供了线程池相关API： ExecutorService和Executors
+ * JDK 5.0起提供了线程池相关API：ExecutorService和Executors
  * ExecutorService：[真正的线程池接口]。常见子类ThreadPoolExecutor
  *    void execute(Runnable command)：执行任务/命令，没有返回值，一般用来执行Runnable
  *    <T> Future<T> submit(Callable<T> task)：执行任务，有返回值，一般又来执行Callable

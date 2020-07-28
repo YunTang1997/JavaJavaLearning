@@ -27,7 +27,7 @@ public class ThreadNew {
         // 3.创建Callable接口实现类的对象
         NumThread numThread = new NumThread();
 
-        // 4.将此Callable接口实现类的对象作为传递到FutureTask构造器中，创建FutureTask的对象
+        // 4.将此Callable接口实现类的对象作为参数传递到FutureTask构造器中，创建FutureTask的对象
         FutureTask futureTask = new FutureTask(numThread);
 
         // 5.将FutureTask的对象作为参数传递到Thread类的构造器中，创建Thread对象，并调用start()
