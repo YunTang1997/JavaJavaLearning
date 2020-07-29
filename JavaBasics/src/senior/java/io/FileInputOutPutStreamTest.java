@@ -12,7 +12,7 @@ import java.io.IOException;
  *
  * 结论：
  * 1.对于文本文件(.txt,.java,.c,.cpp)，使用[字符流]处理。
- * 2.对于非文本文件(.jpg,.mp3,.mp4,.avi,.doc,.ppt,...)，使用[字节流]处理。
+ * 2.对于非文本文件(.jpg,.mp3,.mp4,.avi,.doc,.ppt,...)，使用[字节流]处理。如果仅仅是[拷贝]文本文件，也是可以使用[字节流]的。
  * @author YunTang
  * @create 2020-07-28 21:51
  */
