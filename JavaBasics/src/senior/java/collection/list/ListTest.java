@@ -31,7 +31,7 @@ package senior.java.collection.list;
  *
  *      list.add(123); //第一次调用add()时，底层才创建了长度10的数组，并将数据123添加到elementData[0]
  *      ...
- *      后续的添加和扩容操作与jdk 7 无异。
+ *      后续的添加和扩容操作与jdk 7无异。
  *
  *   2.3 小结：jdk7中的ArrayList的对象的创建类似于单例的饿汉式，而jdk8中的ArrayList的对象
  *            的创建类似于单例的懒汉式，延迟了数组的创建，节省内存。

@@ -178,4 +178,11 @@ public class StringMethodsTest {
         }
     }
 
+    @Test
+    public void test6() {
+
+        boolean res = "abc".equalsIgnoreCase(".abc");
+        System.out.println(res);
+    }
+
 }

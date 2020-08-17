@@ -1,6 +1,7 @@
 package senior.java.collection.list;
 
 import org.junit.jupiter.api.Test;
+import sun.security.util.Length;
 
 import java.util.ArrayList;
 import java.util.Arrays;

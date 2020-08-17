@@ -2,8 +2,6 @@ package senior.java.reflection;
 
 import org.junit.jupiter.api.Test;
 
-import javax.xml.bind.SchemaOutputResolver;
-import java.awt.image.ShortLookupTable;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
